@@ -1,5 +1,5 @@
 
-body{
+body {
   font-family: 'Varela Round', sans-serif;
 }
 
@@ -176,23 +176,37 @@ body{
 }
 
 /* Login Form */
-.form-container {
+.form-container section {
   font-size: 13px;
   border: none;
   transition: all 0.4s;
   text-align: center;
   line-height: 34px;
-  width: 20%;
+  max-width: 50%;
   text-decoration: none;
   text-align: center;
   margin: 100px auto;
+  color: #888;
 }
 
-.form-container button{
+.form-container button {
   color: #fff;
   background: #33cabb;
   padding-top: 8px;
   padding-bottom: 6px;
   vertical-align: middle;
   border: none;
+}
+
+.form-container button:hover {
+  background: #31bfb1;
+}
+
+#bold-up {
+  color: #33cabb;
+}
+
+.form-footer #new-here {
+  margin-top: 16px;
+  margin-bottom: 0;
 }

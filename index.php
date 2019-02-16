@@ -1,12 +1,18 @@
 <?php
-  require "header.php"
+  require "header.php";
 ?>
 
+  <!-- Login Form -->
   <main>
-    <p>Shake you later!</p>
-    <p>Welcome to the Shakedown!</p>
+  <div class="wrapper-main">
+    <section class="section-default">
+      <?php 
+        if (isset($_SESSION['userId'])) {
+          echo '<p class="login-status">You are logged in!</p>';
+        } else {
+          echo '';
+        }
+      ?>
+    </section>
+    </div>
   </main>
-
-<?php
-  require "footer.php"
-?>

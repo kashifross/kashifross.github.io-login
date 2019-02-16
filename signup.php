@@ -92,39 +92,27 @@
         </ul>
       </div>
     </nav>
-      
-    <!-- Header Login Form -->
-    <?php
-        if (isset($_SESSION['userId'])) {
-          echo '<div class="form-container">
-                  <section class="section-default">
-                      <form action="includes/logout.inc.php" method="POST">
-                      <button type="submit" class="btn btn-primary btn-block" name="logout-submit">Logout</button>
-                        <div class="form-footer">
-                    </form>
-                  </section>
-                </div>';
-        } else {
-          echo '<div id="login-form" class="form-container">
-                  <section class="section-default">
-                    <h1>Log<b id="bold-up">in</b></h1>
-                    <form action="includes/login.inc.php" method="POST">
-                      <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Username or Email" name="mail" required="required">
-                      </div>
-                      <div class="form-group">
-                      <input type="password" class="form-control" placeholder="Password" name="pwd"  required="required">
-                      </div>
-                      <button type="submit" class="btn btn-primary btn-block" name="login-submit">Login</button>
-                      <div class="form-footer">
-                        <p id="new-here">New to the site?</p>
-                      </div>
-                    </form>
-                    <a href="signup.php">
-                      <button class="btn btn-primary btn-block">Sign up</button>
-                      </a>
-                  </section>
-                </div>';
-        }
-      ?>
-  </header>
+
+  <main>
+  
+    <div class="form-container">
+      <section class="section-default">
+        <h1>Sign <b id="bold-up">up</b></h1>
+        <form action="includes/signup.inc.php" method="POST">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Username" name="usn" required="required">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Email" name="mail" required="required">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" placeholder="Password" name="pwd"  required="required">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" placeholder="Confirm your password" name="pwd-repeat"  required="required">
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" name="signup-submit" value="Sign up">Sign up</button>
+        </form>
+      </section>
+    </div>
+  </main>
